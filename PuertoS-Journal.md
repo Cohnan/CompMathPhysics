@@ -3,6 +3,7 @@
 ¡Hola mundo!, aquí estoy comenzando el curso de **Métodos Computacionales**.
 
 Herramientas del Curso:
+
 + git,
 + gitHub,
 + bash,
@@ -17,3 +18,5 @@ Y los métodos a estudiar son:
 4. Ecuaciones diferenciales ordinarias,
 5. Ecuaciones diferenciales parciales,
 6. Métodos de Monte Carlo.
+
+Ediciones para
