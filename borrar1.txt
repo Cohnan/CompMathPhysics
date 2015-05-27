@@ -1,0 +1,1 @@
+while (true); do clear; curl -s http://time.is/ | grep clock0 | grep togglesimple | sed 's/."      | sed 
