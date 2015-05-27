@@ -19,4 +19,4 @@ Y los métodos a estudiar son:
 5. Ecuaciones diferenciales parciales,
 6. Métodos de Monte Carlo.
 
-Ediciones para
+Ediciones para experimentar.
