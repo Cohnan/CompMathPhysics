@@ -8,7 +8,7 @@ Este documento tendrá 2 subsecciones:
 ##Subsección 1
 
 + `echo echo Hello, world > hello.txt `
-+ [Este es un link con título](https://www.github.com/Cohnan/MC/Talleres "Página de mis talleres")
++ [Este es un link con título](https://github.com/Cohnan/MC/tree/master/Talleres "Página de mis talleres")
 
 ##Subsección 2
 
