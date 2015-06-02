@@ -36,6 +36,85 @@ Accedimos remótamente al [*Fuerte Super Dimensional*](http://sdf.org "*Super Di
 En el directorio *ejerciciosDeClase* subdirectorio *clase2* agregé un archivo llamado archivo.txt, hice commit, lo eliminé y volví a hacer commit. Luego con `git log` busqué el *hash* del primer commit y con `git checkout` recuperé mi archivo (puesto que esto restaura la información a la versión anterior de mi repositorio).
 Extraje el archivo indicado en el hands-on con `tar -xvf archivo` (la opción `-x` es para extraer, `-v` para mostrar en display el proceso, `-f` para indicar el archivo) y con `git log | less` y luego con ayuda de `G` (para ir al final) busqué el segundo commit hecho. Encontré que la fecha era *Sat Jan 5 23:05:56 2013 -0500*. Además encontré que ese commit fue el add del *syllabus.tex* donde dice que el tema de la Semana 15 es Métodos de inferencia bayesiana y SQL.
 
+#Tercera Clase 02-Jun-2015
+
+##Expresiones Regulares
+
++ Escape de caracteres especiales con slash (para ser entendidos literalmente)
+
+Patroń | Significado
+ --- | ---
+ `^` | Inicio de línea
+ `$` | 
+ `.` | 
+ `*` | 
+ `(a|b)` | 
+ `\(` | 
+ `\[ayc\]` | 
+ `\[^abc]` | 
+ `\\d` | 
+ `\\D` | 
+
++ Análisis de los datos de [Datos satélites Júpiter](http://nssdc.gsfc.nasa.gov/planetary/factsheet/joviansatfact.html)
+
+*NOTA*: Expresión mágica para que regexps funcionen end `sed`
+
+##GNU Plot
+
+Se abre con `gnuplot`.
+
+Para que las gráficas se muestren en la terminal `set term dumb`
+Para especificar rango en paréntesis cuadrados y separado por : antes de la función.
+
+(type set to 'aqua' para resize la pantalla (creo))
+
+Ejemplos: 
++ x
++ sin(x)
+
+`set title "titulo"` ( o xlabel, ylabel, grid, size ratio 1) para que aparezca en las gráficas de ahora en adelante.
+
+Variable por defecto es *x*.
+
+`set size` para el tamaño de los ejes. `set size ratio 1` para que el ratio de los ejes seas igual (así un círculo se muestar correctamente)
+
+###Gráfica Paramétrica
+
+`set parametric` que además cambia la variable a t.
+
+`unset parametric` para quitar esta configuración
+
+`plot fun1,fun2`
+
+###Superficies
+
+`splot fun(x,y)` 
+
+Ejemplo: `splot x**2 + y**2`
+
+###GNU con archivos
+
+`set datafile separator ","` para que la coma seas el separador.
+
+`plot "joviansatellites.csv" using 2:3` para que use los campos 2 y 3 para x y *y* respectivamente.
+
+Opciones adicionales `... with lines`, `... with circles` (linecup)
+
+###Funciones
+
+La forma intuitiva: `nomFun(x) = x**2`
+
+Se le puede aplicar funciones a las columnas del using
+
+###Ejemplo
+
+`plot "joviansatellites.txt" using (quad($2)):(cube($3)) with lines`
+
+
+
+
+
+
 #Project
 
 + Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
