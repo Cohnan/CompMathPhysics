@@ -133,6 +133,32 @@ La expresión regular: `^.... ` : representa cuatro caracteres cualesquiera al i
 '  +' por emptystring
 
 
+#Cuarta Clase 03-Jun-2015
+
+Hacer scatter plot con fechas.
+
+`w3m http://www.exchange-rates.org/history/COP/USD/T | grep "USD COP rate for" | sed 's/COP*//g' | sed 's/ USD.*//g' | sed 's/[a-zA-Z]*//g' | sed 's/  */,/g' | sed 's/, *$//g'`
+
+set datafile separator ","
+
+fallido 'plot `dollar.csv' using 1:`
+entonces
+set xdata time
+set timefmt "%d/%m/%Y"
+ahora asi
+`gnuplot 'dollar.csv' using 1:2 with lines'
+
+##Regresión
+
+y(x) = m*x + b
+fit y(x) 'galaxies.csv' using 1:2  via m, b
+replot m*x + b
+
+##Lenguaje C
+
+Se compila con `gcc`. La opción `-o` recibe de argumento el nombre que se le quiere dar al compilado.
+
+
 
 #Project
 
