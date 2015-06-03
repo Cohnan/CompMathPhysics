@@ -11,7 +11,7 @@ Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Tal
 
 ###Solución
 
-'''bash
+```bash
 #!/bin/bash
 
 wget -q 'https://raw.githubusercontent.com/ComputoCienciasUniandes/MetodosComputacionalesLaboratorio/master/2015-V/actividades/lottery/lottery.csv' #lottery.sh
@@ -21,7 +21,7 @@ echo $fecha
 awk -F, '{if ($1 == 201318518) print $2}' < lottery.csv
 
 rm lottery.csv
-'''
+```
 
 ## Expresiones Regulares
 
@@ -40,11 +40,11 @@ rm lottery.csv
 	* Finalmente usar `sort --field-separator=$'\t' ...`  y `head` para organizar el archivo de acuerdo al cambio porcentual y encontrar el sector con el menor cambio porcentual.
 
 ###Solución
-'''bash
+```bash
 sed 's/\.//g' pgn.dat | sed -E 's/,([0-9])/.\1/g' | sed -E 's/ ([0-9]|\()/\t\1/g' | sed 's/)//g' | sed 's/(/-/g' > pgn.tsv
 
 head -29 pgn.tsv | sort --field-separator=$'\t' -k 6,6 | head -1 | cut -f 1
-'''
+```
 
 ## gnuplot
 
