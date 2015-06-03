@@ -100,6 +100,10 @@ Ejemplo: `splot x**2 + y**2`
 
 Opciones adicionales `... with lines`, `... with circles` (linecup)
 
+###Scripts con gnuplot
+
+Para poder alimentar a gnuplot de los comandos, se utiliza el `<< EOF` al lado de gnuplot y el fin de los comandos a gnuplot se representa con `EOF` otra vez. (No tiene que ser EOF, puede ser cualquier palabra I THINK)
+
 ###Funciones
 
 La forma intuitiva: `nomFun(x) = x**2`
@@ -110,11 +114,26 @@ Se le puede aplicar funciones a las columnas del using
 
 `plot "joviansatellites.txt" using (quad($2)):(cube($3)) with lines`
 
+##Hands-on
 
+###Expresiones Regulares
 
+####Punto 1
+
+La expresión regular: `^.... ` : representa cuatro caracteres cualesquiera al inicio de una línea.
+
+####Punto 2
+
+'^((?!.\d\d\d\d :*).)*$' reemplazarlo por emptystring
+
+'\n\n+' reemplazarlo por emptystring
+
+'^\n' por emptystring.
+
+'  +' por emptystring
 
 
 
 #Project
 
-+ Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
++ Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.  +
