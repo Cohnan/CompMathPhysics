@@ -52,17 +52,17 @@ head -29 pgn.tsv | sort --field-separator=$'\t' -k 6,6 | head -1 | cut -f 1
 
 ```bash
 # Se elimina manualmente las palabras Lesser Satellites. La serie de seds elimina espacios al inicio de línea, comas de miles, R's de rotación retrógrada, 2 o más newlines, y separa en tabs. Guarda esto en un archivo para que gnuplot lo pueda leer.
-sed -E 's/^ +//g' saturnoSatelites | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g' | sed -E 's/  +/\t/g'> saturnoSatelitesMej.tsv'
+#!/bin/bash
+sed -E 's/^ +//g' saturnoSatelites | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g' | sed -E 's/  +/\t/g'> saturnoSatelitesMej.tsv
 
 gnuplot << EOF
-set term dumb
 set datafile separator "\t"
-set titulo "titulo"
-set xlabel "xxxx"
-set ylabel "yyyy"
+set titulo "Satelites de Saturno: 3a ley de Kepler"
+set xlabel "Cuadrado del Tiempo de Orbita"
+set ylabel "Cubo del Semieje Mayor"
 cuad(x) = x**2
 cubo(x) = x**3
-plot "saturnoSatelitesMej.csv" using (cuad($2)):(cubo($3)) with lines
+plot "saturnoSatelitesMej.tsv" using (cuad($4)):(cubo($2)) with lines
 EOF
 ```
 
