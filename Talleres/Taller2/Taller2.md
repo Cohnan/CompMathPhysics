@@ -51,8 +51,19 @@ head -29 pgn.tsv | sort --field-separator=$'\t' -k 6,6 | head -1 | cut -f 1
 1. Haga con [Saturno](http://nssdc.gsfc.nasa.gov/planetary/factsheet/saturniansatfact.html) lo mismo que hicimos con Júpiter: limpiar el archivo llevándolo a formato `csv` y hacer una gráfica con `gnuplot` que evalúe la tercera ley de Kepler. Hay que tener especial cuidado con la columna para el periodo de rotación.
 
 ```bash
-# Se elimina manualmente las palabras Lesser Satellites. La serie de seds elimina espacios, newlines, comas de miles, R's y separa en comas
-sed -E 's/^ +//g' saturnoSatelites.csv | sed -E 's/  +/\t/g' | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g'
+# Se elimina manualmente las palabras Lesser Satellites. La serie de seds elimina espacios al inicio de línea, comas de miles, R's de rotación retrógrada, 2 o más newlines, y separa en tabs. Guarda esto en un archivo para que gnuplot lo pueda leer.
+sed -E 's/^ +//g' saturnoSatelites | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g' | sed -E 's/  +/\t/g'> saturnoSatelitesMej.tsv'
+
+gnuplot << EOF
+set term dumb
+set datafile separator "\t"
+set titulo "titulo"
+set xlabel "xxxx"
+set ylabel "yyyy"
+cuad(x) = x**2
+cubo(x) = x**3
+plot "saturnoSatelitesMej.csv" using (cuad($2)):(cubo($3)) with lines
+EOF
 ```
 
 **Al terminar la clase ejecute `lottery.sh` para saber si su taller va a ser revisado.**
