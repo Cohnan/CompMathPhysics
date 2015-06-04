@@ -47,7 +47,7 @@ rm .worldhistorytsv
 echo "LOOK AT THE FOLLOWING STARS:"
 printf "%-${cell}s%-${cell}s%-${cell}s\n" "RA/°" "DEC/°" "HIP No."
 
-# Guarda el valor previo para el IFS (que determina el word splitting que sucede durante la expansión de argumentos).
+# Guarda el valor previo para el IFS (que determina el word splitting que sucede durante la expansión de argumentos). Esto para que lo que imprime awk, al ser expandido sea interpretado como argumentos que pueda leer printf.
 # Aunque no es necesario guardar el valor previo para el archivo tal y como está (puesto que su scope es sólo este script), preferí hacerlo en caso de luego querer extender el archivo para no tener problemas luego con el word splitting
 oldIFS="$IFS"
 
