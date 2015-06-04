@@ -52,18 +52,22 @@ head -29 pgn.tsv | sort --field-separator=$'\t' -k 6,6 | head -1 | cut -f 1
 
 ```bash
 # Se elimina manualmente las palabras Lesser Satellites. La serie de seds elimina espacios al inicio de línea, comas de miles, R's de rotación retrógrada, 2 o más newlines, y separa en tabs. Guarda esto en un archivo para que gnuplot lo pueda leer.
-#!/bin/bash
-sed -E 's/^ +//g' saturnoSatelites | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g' | sed -E 's/  +/\t/g'> saturnoSatelitesMej.tsv
+sed -E 's/^ +//g' saturnoSatelites.csv | sed -E 's/([0-9]),/\1/g' | sed -E 's/([0-9])R/\1/g' | sed ':a;N;$!ba;s/\n\n\n*/\n/g' | sed -E 's/  +/\t/g'> saturnoSatelitesMej.tsv
 
-gnuplot << EOF
+En `gnuplot`:
+# Grafica los puntos de el cuadrado del Tiempo vs el cubo de la Distancia
 set datafile separator "\t"
-set titulo "Satelites de Saturno: 3a ley de Kepler"
+set title "Satelites de Saturno: 3a ley de Kepler"
 set xlabel "Cuadrado del Tiempo de Orbita"
 set ylabel "Cubo del Semieje Mayor"
 cuad(x) = x**2
 cubo(x) = x**3
-plot "saturnoSatelitesMej.tsv" using (cuad($4)):(cubo($2)) with lines
-EOF
+plot "saturnoSatelitesMej.tsv" using (cuad($4)):(cubo($2))
+
+# Hace una regresión lineal de los puntos y sobre la gráfica anterior dibuja la recta resultante
+y(x)=m*x + b
+fit y(x) "saturnoSatelitesMej.tsv" using (cuad($4)):(cubo($2)) via m, b
+replot m*x + b
 ```
 
 **Al terminar la clase ejecute `lottery.sh` para saber si su taller va a ser revisado.**
