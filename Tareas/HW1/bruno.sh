@@ -5,7 +5,7 @@
 # Periodo: 2015-19
 # Tarea 1 Punto 2
 
-## Los archivos que se hagan serán escondidos y removidos cuando dejen de ser necesarios.
+## Ya que no estoy seguro de que la carpeta para archivos temporales sea la misma en diferentes sistemas operativos, los archivos temporales son creados en la carpeta donde se guarda el script y removidos posteriormente.
 
 ## Imprimir la cantidad de planetas en el catálogo
 echo
@@ -39,7 +39,7 @@ echo
 
 # Imprime el nombre del planeta con menor periodo orbital alrededor de su estrella.
 # Hace uso de sort para ordenar los datos de menor a mayor respecto a la columna con el periodo, head para extraer la primera línea, y cut para simplemente imprimir el campo del nombre
-echo "El nombre del planeta con el menor periodo orbital es:" $(sort --field-separator="," --key=6 -n keplerSinHead.csv | head -1 | cut --delimiter="," -f 1)
+echo "El nombre del planeta con el menor periodo orbital es:" $(sort --field-separator="," --key=6 -n .keplerSinHeadcsv | head -1 | cut --delimiter="," -f 1)
 
 rm .keplerSinHeadcsv
 
