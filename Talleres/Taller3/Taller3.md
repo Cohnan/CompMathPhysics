@@ -20,6 +20,8 @@ for prog in $(ls $carpetaprogs .c); do echo "#$prog"; echo "\`\`\`c"; cat "$carp
 2. Ahora borre los archivos `c31_goto.c`, `c83_terminal_io.c` y `cA5_thread_join.c` y haga lo siguiente para los primeros (en orden alfabético) treinta archivos de C restantes.  Escriba un comando de `bash` que compile cada archivo de C, que luego imprima la línea que contiene la palabra *Example* y [la que le sigue](http://stackoverflow.com/questions/19274127/how-do-you-grep-a-file-and-get-the-next-5-lines), que luego ejecute el ejecutable, y que finalmente espere a que [el usuario presione alguna tecla](http://www.linuxquestions.org/questions/linux-general-1/how-to-make-shell-script-wait-for-key-press-to-proceed-687491/) para continuar con el siguiente archivo. 
 
 ```bash
+rm $carpetaProgs{"c31_goto.c","c83_terminal_io.c","cA5_thread_join.c"}
+
 ls "$carpetaProgs" | head -5 | while read prog; do gcc -o $carpetaProgs$prog.out $carpetaProgs$prog; grep -A 1 "Example" $carpetaProgs$prog; $carpetaProgs$prog; read -n 1; done
 ```
 
