@@ -1,8 +1,8 @@
 #/usuarios/homenfs1/sc.puerto10/gitReps/c-examples/src/:
-
-
-
+```c
+```\n\n
 #c01_empty_main.c
+```c
 /*
  * Example #1
  * (almost) empty main function.
@@ -41,10 +41,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c02_hello_world.c
+```c
 /*
  * Example #2
  * Print "Hello world!" to the standard output and then exit
@@ -87,10 +86,9 @@ int main(void)
     return 42;
 }
 
-
-
-
+```\n\n
 #c03_data_types.c
+```c
 /*
  * Example #3
  * Print the actual "width" of almost all basic data types.
@@ -137,10 +135,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c04_arithmetic_operators.c
+```c
 /*
  * Example #4
  * Arithmetic operators basic usage.
@@ -191,10 +188,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c05_arithmetic_operators.c
+```c
 /*
  * Example #5
  * Arithmetic operators basic usage.
@@ -242,10 +238,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c06_arithmetic_operators.c
+```c
 /*
  * Example #6
  * Arithmetic operators basic usage.
@@ -294,10 +289,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c07_arithmetic_operators.c
+```c
 /*
  * Example #7
  * Arithmetic operators basic usage.
@@ -345,10 +339,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c08_logical_operators.c
+```c
 /*
  * Example #8
  * Logical operators basic usage.
@@ -402,10 +395,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c09_bit_operators.c
+```c
 /*
  * Example #9
  * Bit operators basic usage.
@@ -464,10 +456,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c10_logical_vs_bit_operators.c
+```c
 /*
  * Example #10
  * Bit operators versus logical operators.
@@ -526,10 +517,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c11_bit_left_shift.c
+```c
 /*
  * Example #11
  * Bit left shift.
@@ -586,10 +576,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c12_bit_right_shift.c
+```c
 /*
  * Example #12
  * Bit right shift.
@@ -646,10 +635,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c13_arithmetic_left_shift.c
+```c
 /*
  * Example #13
  * Arithmetic left shift.
@@ -710,10 +698,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c14_arithmetic_right_shift.c
+```c
 /*
  * Example #14
  * Bit right shift.
@@ -772,10 +759,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c15_relational_operators.c
+```c
 /*
  * Example #15
  * Relational operators.
@@ -835,10 +821,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c16_asignment_operators.c
+```c
 /*
  * Example #16
  * Asignment operators.
@@ -896,10 +881,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c17_ternary_operator.c
+```c
 /*
  * Example #17
  * Ternary operator.
@@ -946,10 +930,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c18_ternary_operator.c
+```c
 /*
  * Example #18
  * Ternary operator.
@@ -992,10 +975,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c19_if_then.c
+```c
 /*
  * Example #19
  * if-then condition.
@@ -1040,10 +1022,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c20_if_then_else.c
+```c
 /*
  * Example #20
  * if-then-else condition.
@@ -1091,10 +1072,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c21_nested_if.c
+```c
 /*
  * Example #21
  * Nested ifs.
@@ -1145,10 +1125,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c22_while_loop.c
+```c
 /*
  * Example #22
  * while loop.
@@ -1194,10 +1173,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c23_while_loop.c
+```c
 /*
  * Example #23
  * while loop.
@@ -1242,10 +1220,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c24_do_while_loop.c
+```c
 /*
  * Example #24
  * do-while loop.
@@ -1291,10 +1268,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c25_do_while_loop.c
+```c
 /*
  * Example #25
  * do-while loop.
@@ -1339,10 +1315,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c26_for_loop.c
+```c
 /*
  * Example #26
  * for loop.
@@ -1387,10 +1362,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c27_for_loop.c
+```c
 /*
  * Example #27
  * for loop.
@@ -1435,10 +1409,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c28_for_loop.c
+```c
 /*
  * Example #28
  * for loop.
@@ -1483,10 +1456,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c29_break.c
+```c
 /*
  * Example #29
  * break statement.
@@ -1533,10 +1505,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c30_continue.c
+```c
 /*
  * Example #30
  * continue statement.
@@ -1583,10 +1554,9 @@ int main(void)
     return 0;
 }
 
-
-
-
+```\n\n
 #c31_goto.c
+```c
 /*
  * Example #31
  * goto statement.
@@ -1628,10 +1598,9 @@ REPEAT:
     return 0;
 }
 
-
-
-
+```\n\n
 #c32_goto.c
+```c
 /*
  * Example #32
  * goto statement - typical usage.
@@ -1711,10 +1680,9 @@ EXIT:
     return 1;
 }
 
-
-
-
+```\n\n
 #c33_switch.c
+```c
 /*
  * Example #33
  * simple switch statement.
@@ -1765,10 +1733,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c34_switch.c
+```c
 /*
  * Example #34
  * simple switch statement with the default branch.
@@ -1822,10 +1789,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c35_switch.c
+```c
 /*
  * Example #35
  * simple switch statement with the default branch and multiple constants in case branches.
@@ -1881,10 +1847,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c36_switch.c
+```c
 /*
  * Example #36
  * problem with missing "break" statement.
@@ -1940,10 +1905,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c37_arrays.c
+```c
 /*
  * Example #37
  * basic array operations.
@@ -1996,10 +1960,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c38_arrays.c
+```c
 /*
  * Example #38
  * good luck with segfault! :-)
@@ -2046,10 +2009,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c39_arrays.c
+```c
 /*
  * Example #39
  * how to pass arrays to functions.
@@ -2103,10 +2065,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c40_arrays.c
+```c
 /*
  * Example #40
  * multidimensional arrays.
@@ -2161,10 +2122,9 @@ int main(int argc, char **argv)
 }
 
 
-
-
-
+```\n\n
 #c41_arrays.c
+```c
 /*
  * Example #41
  * multidimensional arrays.
@@ -2215,10 +2175,9 @@ int main(int argc, char **argv)
 }
 
 
-
-
-
+```\n\n
 #c42_struct.c
+```c
 /*
  * Example #42
  * Structure declaration.
@@ -2279,10 +2238,9 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c43_struct.c
+```c
 /*
  * Example #43
  * Structure declaration - better solution.
@@ -2343,10 +2301,9 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c44_struct.c
+```c
 /*
  * Example #44
  * Data padding (and alignment).
@@ -2403,10 +2360,9 @@ int main(int argc, char**argv)
     printf("sizeof struct{int, char, int} is %d\n", (int)sizeof(t_point3));
     return 0;
 }
-
-
-
+```\n\n
 #c45_struct.c
+```c
 /*
  * Example #45
  * Array of struct.
@@ -2465,10 +2421,9 @@ int main(int argc, char**argv)
 
     return 0;
 }
-
-
-
+```\n\n
 #c46_struct.c
+```c
 /*
  * Example #46
  * Struct containing an array.
@@ -2549,10 +2504,9 @@ int main(int argc, char**argv)
 
     return 0;
 }
-
-
-
+```\n\n
 #c47_union.c
+```c
 /*
  * Example #47
  * Union.
@@ -2611,10 +2565,9 @@ int main(int argc, char**argv)
 
     return 0;
 }
-
-
-
+```\n\n
 #c48_union.c
+```c
 /*
  * Example #48
  * Union and struct (and bit field).
@@ -2672,10 +2625,9 @@ int main(int argc, char**argv)
     printf("%x\n", u.int_value);
     return 0;
 }
-
-
-
+```\n\n
 #c49_bitfields.c
+```c
 /*
  * Example #49
  * Structures versus bit fields.
@@ -2730,10 +2682,9 @@ int main( ) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c50_bitfields.c
+```c
 /*
  * Example #50
  * Signed and unsigned values in bitfields.
@@ -2799,10 +2750,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c51_pointers.c
+```c
 /*
  * Example #51
  * Pointers.
@@ -2850,10 +2800,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c52_pointers.c
+```c
 /*
  * Example #52
  * Pointers.
@@ -2900,10 +2849,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c53_pointers.c
+```c
 /*
  * Example #53
  * Pointers.
@@ -2949,10 +2897,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c54_pointers.c
+```c
 /*
  * Example #54
  * Pointers.
@@ -3005,10 +2952,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c55_pointers.c
+```c
 /*
  * Example #55
  * Pointers.
@@ -3063,10 +3009,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c56_pointers.c
+```c
 /*
  * Example #56
  *
@@ -3122,10 +3067,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c57_pointers_and_arrays.c
+```c
 /*
  * Example #57
  *
@@ -3184,10 +3128,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c58_pointers_and_arrays.c
+```c
 /*
  * Example #58
  *
@@ -3247,10 +3190,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c59_pointers_and_arrays.c
+```c
 /*
  * Example #59
  *
@@ -3304,10 +3246,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c60_pointers_and_arrays.c
+```c
 /*
  * Example #60
  *
@@ -3355,10 +3296,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c61_pointers_and_structures.c
+```c
 /*
  * Example #61
  * Pointers and stuctures.
@@ -3416,10 +3356,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c62_pointers_and_structures.c
+```c
 /*
  * Example #62
  * Pointers and stuctures.
@@ -3489,10 +3428,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c63_linked_list.c
+```c
 /*
  * Example #63
  * Linked list.
@@ -3566,10 +3504,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c64_linked_list.c
+```c
 /*
  * Example #64
  * Linked list.
@@ -3639,10 +3576,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c65_linked_list.c
+```c
 /*
  * Example #65
  * Linked list.
@@ -3725,10 +3661,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c66_linked_list.c
+```c
 /*
  * Example #66
  * Linked list - updated example #64.
@@ -3807,10 +3742,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c67_linked_list.c
+```c
 /*
  * Example #67
  * Linked list - updated example #65.
@@ -3902,10 +3836,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c68_tree.c
+```c
 /*
  * Example #68
  * Binary tree.
@@ -3996,10 +3929,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c69_strings.c
+```c
 /*
  * Example #69
  * Strings.
@@ -4043,10 +3975,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c70_strings.c
+```c
 /*
  * Example #70
  * Strings.
@@ -4090,10 +4021,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c71_strings.c
+```c
 /*
  * Example #71
  * Strings - dynamic string allocation: malloc() and free().
@@ -4144,10 +4074,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c72_strings.c
+```c
 /*
  * Example #72
  * Strings - dynamic string allocation: calloc() and free().
@@ -4198,10 +4127,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c73_strings.c
+```c
 /*
  * Example #73
  * Strings - sprintf function.
@@ -4252,10 +4180,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c74_strings.c
+```c
 /*
  * Example #74
  * Strings - strcat, strcpy and strlen functions.
@@ -4308,10 +4235,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c75_strings.c
+```c
 /*
  * Example #75
  * Strings - string comparison.
@@ -4362,10 +4288,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c76_strings.c
+```c
 /*
  * Example #76
  * String as a character array.
@@ -4435,10 +4360,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c77_strings.c
+```c
 /*
  * Example #77
  * User-defined strlen function.
@@ -4495,10 +4419,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c78_strings.c
+```c
 /*
  * Example #78
  * User-defined strcpy function.
@@ -4563,10 +4486,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c79_strings.c
+```c
 /*
  * Example #79
  * Array of strings.
@@ -4625,10 +4547,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c80_strings.c
+```c
 /*
  * Example #80
  * Array of dynamically allocated strings.
@@ -4709,10 +4630,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c81_terminal_io.c
+```c
 /*
  * Example #81
  * Basic terminal I/O functions.
@@ -4753,10 +4673,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c82_terminal_io.c
+```c
 /*
  * Example #82
  * Basic terminal I/O functions.
@@ -4814,10 +4733,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c83_terminal_io.c
+```c
 /*
  * Example #83
  * Basic terminal I/O functions.
@@ -4862,10 +4780,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c84_terminal_io.c
+```c
 /*
  * Example #84
  * Basic terminal I/O functions.
@@ -4911,10 +4828,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c85_terminal_io.c
+```c
 /*
  * Example #85
  * Basic terminal I/O functions.
@@ -4960,10 +4876,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c86_terminal_io.c
+```c
 /*
  * Example #86
  * Basic terminal I/O functions.
@@ -5015,10 +4930,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c87_file_io.c
+```c
 /*
  * Example #87
  * Basic file I/O functions.
@@ -5063,10 +4977,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c88_file_io.c
+```c
 /*
  * Example #88
  * Basic file I/O functions.
@@ -5113,10 +5026,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c89_file_io.c
+```c
 /*
  * Example #89
  * Basic file I/O functions.
@@ -5169,10 +5081,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c90_file_io.c
+```c
 /*
  * Example #90
  * Basic file I/O functions.
@@ -5246,10 +5157,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c91_file_io.c
+```c
 /*
  * Example #91
  * Write versus append file I/O functions.
@@ -5301,10 +5211,9 @@ int main(void) {
     return 0;
 }
 
-
-
-
+```\n\n
 #c92_file_io.c
+```c
 /*
  * Example #92
  * Reading items from the file char-by-char.
@@ -5371,10 +5280,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c93_file_io.c
+```c
 /*
  * Example #93
  * fprintf() function.
@@ -5440,10 +5348,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c94_file_io.c
+```c
 /*
  * Example #94
  * This program renders simple pattern and stores it in .pgm (raster) file.
@@ -5505,10 +5412,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c95_file_io.c
+```c
 /*
  * Example #95
  * IFS renderer.
@@ -5767,10 +5673,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #c96_pthreads.c
+```c
 /*
  * Example #96
  * Basic usage of Posix threads.
@@ -5835,10 +5740,9 @@ int main (int argc, char *argv[])
     pthread_exit(NULL);
 }
 
-
-
-
+```\n\n
 #c97_pthreads.c
+```c
 /*
  * Example #97
  * 10 concurrent threads.
@@ -5919,10 +5823,9 @@ int main (int argc, char *argv[])
     pthread_exit(NULL);
 }
 
-
-
-
+```\n\n
 #c98_pthreads.c
+```c
 /*
  * Example #98
  * 20 concurrent computionally intensive threads.
@@ -6025,10 +5928,9 @@ int main (int argc, char *argv[])
     pthread_exit(NULL);
 }
 
-
-
-
+```\n\n
 #c99_pthreads.c
+```c
 /*
  * Example #99
  * 20 concurrent computionally intensive threads.
@@ -6153,10 +6055,9 @@ int main (int argc, char *argv[])
     pthread_exit(NULL);
 }
 
-
-
-
+```\n\n
 #cA0_getpid.c
+```c
 /*
  * Example #100
  * getpid().
@@ -6199,10 +6100,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #cA1_getppid.c
+```c
 /*
  * Example #101
  * getppid().
@@ -6246,10 +6146,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #cA2_fork.c
+```c
 /*
  * Example #102
  * fork().
@@ -6309,10 +6208,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
-
-
+```\n\n
 #cA3_fork_exec.c
+```c
 /*
  * Example #103
  * fork() and exec().
@@ -6378,10 +6276,9 @@ int main(int argc, char **argv)
     }
 }
 
-
-
-
+```\n\n
 #cA4_fork_exec.c
+```c
 /*
  * Example #104
  * fork() and exec().
@@ -6450,10 +6347,9 @@ int main(int argc, char **argv)
         return 0;
 }
 
-
-
-
+```\n\n
 #cA5_thread_join.c
+```c
 /*
  * Example #105
  * Basic usage of Posix threads.
@@ -6519,6 +6415,4 @@ int main (int argc, char *argv[])
     return 0;
 }
 
-
-
-
+```\n\n
