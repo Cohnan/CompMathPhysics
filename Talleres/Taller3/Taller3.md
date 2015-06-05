@@ -22,7 +22,7 @@ for prog in $(ls $carpetaProgs .c); do echo "#$prog"; echo "\`\`\`c"; cat $carpe
 ```bash
 rm $carpetaProgs{"c31_goto.c","c83_terminal_io.c","cA5_thread_join.c"}
 
-ls ${carpetaProgs}/*.c | head -30 | while read prog ; do gcc -s -o $prog.out $prog ; grep -A 1 "Example" $prog ; $prog.out ; echo -e "\n\n"; done
+ls ${carpetaProgs}/*.c | head -30 | while read prog ; do gcc -s -o $prog.out $prog ; grep -A 1 "Example" $prog ; $prog.out ; echo -e "\n" ; read -e -p "Press any key to continue..." -n1 -s < /dev/tty; echo -e "\n\n" ;  done
 
 ```
 
