@@ -96,7 +96,7 @@ Ejemplo: `splot x**2 + y**2`
 
 `set datafile separator ","` para que la coma seas el separador.
 
-`plot "joviansatellites.csv" using 2:3` para que use los campos 2 y 3 para x y *y* respectivamente.
+`plot "joviansatellites.csv" using 2:3` para que use los campos 2 y 3 para *x* y *y* respectivamente.
 
 Opciones adicionales `... with lines`, `... with circles` (linecup)
 
