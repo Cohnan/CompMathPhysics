@@ -19,6 +19,21 @@ Y los métodos a estudiar son:
 5. Ecuaciones diferenciales parciales,
 6. Métodos de Monte Carlo.
 
+Se estudi´o Git, plataforma que permite el almacenamiento el manejo de versiones de archivos. Se basa en la creaci´on de Repositorios, cada uno de los cuales corresponde a un proyecto diferente, al cual una o varias personas pueden aportar, con la ventaja de que para cada aporte o Commit puede guarda la informaci´on tal como est´aba antes y es posible volver a ella.
+
+Las etapas en las que puede estar un archivo son 3: Untracked en la que el archivo no es parte del repositorio, agregado al Work Stage que indica que para la versi´on generada a partir del pr´oximo commit los cambios al archivo al momento del add ser´an parte, y Stage (creo) que indica que todos los cambios en el archivo son parte ya del repositorio.
+
+Vimos la integraci´on de Git con github.com. All´i los repositorios son almacenados junto con toda la informaci´on de los commits hechos a ´el, de modo que es posible descargar o Clonar el repositorio a la m´aquina local, hacer los commits deseados y cuando se desee, actualizar la informaci´on en github para igualar a la local.
+
+Los comandos ´utiles vistos son:
++ ˋgit add ARCHIVOS...ˋ para cambiar de untracked a staged en el workarea
++ ˋgit commitˋ para hacer el commit de todos los cambios agregados. Abre el editor de texto predeterminado para hacer comentarios sobre el commit. Permite la opci´on ˋ-mˋ que recibe de argumento el comentario.
++ ˋgit push origin masterˋ para subir los cambios del repositorio a github.
++ ˋgit pull origin masterˋ para descargar los cambios del reposiorio a la carpeta local del mismo.
++ ˋgit cloneˋ para clonar un repositorio a la m´aquina local.
++ ˋgit config ˋ para cambiar el usuariode github con el que se suben los cambios.
++ ˋgit config ˋ para cambiar la contraseña del usuario anterior.
++ ˋgit config ˋ para cambiar el editor que abre git.
 
 Se estudió brevemente `ssh` (Secure Shell). Vimos que a grandes rasgos ssh sirve para conectarse remotamente a un host para el cual tenemos un login y contraseña. Por ejemplo `ssh sc.puerto10@compufi3.uniandes.edu.co` me conecta al computador 3 de compufísica con el usuario *sc.puerto10*. (El usuario es opcional al momento de iniciar la conexión)
 
