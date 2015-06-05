@@ -14,7 +14,7 @@ Clone el repositorio [c-examples](https://github.com/tisnik/c-examples) de Pavel
 ```bash
 carpetaProgs=~/gitReps/c-examples/src
 
-for prog in $(ls $carpetaProgs .c); do echo "#$prog"; echo "\`\`\`c"; cat $prog" ; echo "\`\`\`\n\n" ; done > codigosC.md
+for prog in $(ls $carpetaProgs .c); do echo "#$prog"; echo "\`\`\`c"; cat $carpetaProgs/$prog ; echo "\`\`\`\n\n" ; done > codigosC.md
 ```
 
 2. Ahora borre los archivos `c31_goto.c`, `c83_terminal_io.c` y `cA5_thread_join.c` y haga lo siguiente para los primeros (en orden alfabético) treinta archivos de C restantes.  Escriba un comando de `bash` que compile cada archivo de C, que luego imprima la línea que contiene la palabra *Example* y [la que le sigue](http://stackoverflow.com/questions/19274127/how-do-you-grep-a-file-and-get-the-next-5-lines), que luego ejecute el ejecutable, y que finalmente espere a que [el usuario presione alguna tecla](http://www.linuxquestions.org/questions/linux-general-1/how-to-make-shell-script-wait-for-key-press-to-proceed-687491/) para continuar con el siguiente archivo. 
