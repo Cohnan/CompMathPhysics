@@ -1,4 +1,4 @@
-#/usuarios/homenfs1/sc.puerto10/gitReps/c-examples/src/:
+#/home/cohnan/metodosCompu/github_Cohnan/c-examples/src:
 ```c
 ```\n\n
 #c01_empty_main.c

@@ -1,0 +1,438 @@
+ * Example #1
+ * (almost) empty main function.
+
+
+
+ * Example #2
+ * Print "Hello world!" to the standard output and then exit
+
+Hello world!
+
+
+ * Example #3
+ * Print the actual "width" of almost all basic data types.
+
+sizeof char      = 1 byte(s)
+sizeof short     = 2 byte(s)
+sizeof int       = 4 byte(s)
+sizeof long      = 8 byte(s)
+sizeof long long = 8 byte(s)
+sizeof float     = 4 byte(s)
+sizeof double    = 8 byte(s)
+
+
+ * Example #4
+ * Arithmetic operators basic usage.
+
+Positive operands:
+13
+7
+30
+3
+1
+
+Negative operands:
+-13
+-7
+30
+3
+-1
+
+
+ * Example #5
+ * Arithmetic operators basic usage.
+
+-- operator:
+original x value = 10
+original y value = 10
+x--              = 10
+--y              = 9
+new x value      = 9
+new y value      = 9
+
+
+ * Example #6
+ * Arithmetic operators basic usage.
+
+Positive operands:
+13.000000
+7.000000
+30.000000
+3.333333
+
+Negative operands:
+-13.000000
+-7.000000
+30.000000
+3.333333
+
+
+ * Example #7
+ * Arithmetic operators basic usage.
+
+-- operator:
+original x value = 10.000000
+original y value = 10.000000
+x--              = 10.000000
+--y              = 9.000000
+new x value      = 9.000000
+new y value      = 9.000000
+
+
+ * Example #8
+ * Logical operators basic usage.
+
+!0     = 1
+!1     = 0
+!1000  = 0
+!!1000 = 1
+
+0 && 0 = 0
+0 && 1 = 0
+1 && 0 = 0
+1 && 1 = 1
+
+0 || 0 = 0
+0 || 1 = 1
+1 || 0 = 1
+1 || 1 = 1
+
+
+
+ * Example #9
+ * Bit operators basic usage.
+
+~0     = -1
+~1     = -2
+~1000  = -1001
+~!1000 = -1
+
+0 & 0 = 0
+0 & 1 = 0
+1 & 0 = 0
+1 & 1 = 1
+
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+
+
+
+ * Example #10
+ * Bit operators versus logical operators.
+
+1 & 1 = 1
+1 & 2 = 0
+2 & 1 = 0
+2 & 2 = 2
+
+1 | 1 = 1
+1 | 2 = 3
+2 | 1 = 3
+2 | 2 = 2
+
+1 && 1 = 1
+1 && 2 = 1
+2 && 1 = 1
+2 && 2 = 1
+
+1 || 1 = 1
+1 || 2 = 1
+2 || 1 = 1
+2 || 2 = 1
+
+
+
+ * Example #11
+ * Bit left shift.
+
+1 << 0 = 1
+1 << 1 = 2
+1 << 2 = 4
+1 << 3 = 8
+1 << 4 = 16
+1 << 10 = 1024
+1 << 20 = 1048576
+
+3 << 0 = 3
+3 << 1 = 6
+3 << 2 = 12
+3 << 3 = 24
+3 << 4 = 48
+3 << 10 = 3072
+3 << 20 = 3145728
+
+
+
+ * Example #12
+ * Bit right shift.
+
+1000 >> 0 = 1000
+1000 >> 1 = 500
+1000 >> 2 = 250
+1000 >> 3 = 125
+1000 >> 4 = 62
+1000 >> 10 = 0
+1000 >> 20 = 0
+
+3000 >> 0 = 3000
+3000 >> 1 = 1500
+3000 >> 2 = 750
+3000 >> 3 = 375
+3000 >> 4 = 187
+3000 >> 10 = 2
+3000 >> 20 = 0
+
+
+
+ * Example #13
+ * Arithmetic left shift.
+
+-1 << 0 = -1
+-1 << 1 = -2
+-1 << 2 = -4
+-1 << 3 = -8
+-1 << 4 = -16
+-1 << 10 = -1024
+-1 << 20 = -1048576
+
+-3 << 0 = -3
+-3 << 1 = -6
+-3 << 2 = -12
+-3 << 3 = -24
+-3 << 4 = -48
+-3 << 10 = -3072
+-3 << 20 = -3145728
+
+
+
+ * Example #14
+ * Bit right shift.
+
+1000 >> 0 = 1000
+1000 >> 1 = 500
+1000 >> 2 = 250
+1000 >> 3 = 125
+1000 >> 4 = 62
+1000 >> 10 = 0
+1000 >> 20 = 0
+
+3000 >> 0 = 3000
+3000 >> 1 = 1500
+3000 >> 2 = 750
+3000 >> 3 = 375
+3000 >> 4 = 187
+3000 >> 10 = 2
+3000 >> 20 = 0
+
+
+
+ * Example #15
+ * Relational operators.
+
+x == y = 0
+x != y = 1
+x >  y = 0
+x >= y = 0
+x <= y = 1
+x <  y = 1
+
+xf == yf = 0
+xf != yf = 1
+xf >  yf = 1
+xf >= yf = 1
+xf <= yf = 0
+xf <  yf = 0
+
+
+
+ * Example #16
+ * Asignment operators.
+
+x = 1
+x = 11
+x = 1
+x = 42
+x = 21
+x = 5
+
+
+ * Example #17
+ * Ternary operator.
+
+x is positive
+x has value different from zero
+1/x = 1.000000
+
+
+ * Example #18
+ * Ternary operator.
+
+x is zero
+
+
+ * Example #19
+ * if-then condition.
+
+x is positive number
+
+
+ * Example #20
+ * if-then-else condition.
+
+x is positive number
+
+
+ * Example #21
+ * Nested ifs.
+
+x is zero
+
+
+ * Example #22
+ * while loop.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #23
+ * while loop.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #24
+ * do-while loop.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #25
+ * do-while loop.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #26
+ * for loop.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #27
+ * for loop.
+
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+1024
+2048
+4096
+8192
+
+
+ * Example #28
+ * for loop.
+
+2^0 = 1
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+2^7 = 128
+2^8 = 256
+2^9 = 512
+2^10 = 1024
+
+
+ * Example #29
+ * break statement.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ * Example #30
+ * continue statement.
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+
+
