@@ -1,0 +1,3 @@
+Animación (particulas en el tiempo por ejemplo)
+Histograma (distribuciones de las rapideces (probabilidad vs rapidez))
+Ajuste (de la distribución -v*e^(v**2 * k))
