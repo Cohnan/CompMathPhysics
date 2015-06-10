@@ -1,0 +1,52 @@
+
+
+*******************************************************************************
+Wed Jun 10 09:20:49 2015
+
+
+FIT:    data read from 'Rayleigh.csv' using 3:4
+        format = x:z
+        #datapoints = 401600
+        residuals are weighted equally (unit weight)
+
+function used for fitting: dist(v)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 261464            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0
+
+initial set of free parameter values
+
+k               = 1
+BREAK:          Singular matrix in Givens()
+
+
+
+*******************************************************************************
+Wed Jun 10 09:21:15 2015
+
+
+FIT:    data read from 'Rayleigh.csv' using 3:4
+        format = x:z
+        #datapoints = 401600
+        residuals are weighted equally (unit weight)
+
+function used for fitting: dist(v)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 261464            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0
+
+initial set of free parameter values
+
+k               = 1.001
+BREAK:          Singular matrix in Givens()
+
