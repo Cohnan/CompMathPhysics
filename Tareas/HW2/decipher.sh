@@ -42,8 +42,19 @@ function flip {			#Función para hallar la letra de la cual proviene el caracter
 }
 
 #Leer de stdin la información para desencriptar y guardarla temporalmente en un archivo que será modificado a lo largo del programa para contener la información original
-read trozo
-echo "$trozo" > .trozoModificado
+if [ ${1-X} = X ]
+then
+	read texto
+	printf "$texto" > .trozoModificado
+
+	if [ ! -s .trozoModificado ]
+	then
+		echo "No hay nada que leer"
+		exit 1
+	fi
+else
+	cp "$1" .trozoModificado
+fi
 
 #Para cada barrido, reemplaza utilizando flip.sh, empezando desde la última letra que pudo ser modificada de acuerdo a la tabla, la modificación de letras que se realizó en la encriptación por la inmediatamente anterior
 for i in $(seq 1 $barridos)
