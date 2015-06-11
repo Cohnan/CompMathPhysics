@@ -1,5 +1,5 @@
 #!/bin/bash
-gcc -std=99 -o punto3.out punto3.c -lm
+gcc -std=c99 -o punto3.out punto3.c -lm
 ./punto3.out > sphericalrands.csv
 
 gnuplot << EOF
