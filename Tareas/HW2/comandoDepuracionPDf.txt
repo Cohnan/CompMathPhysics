@@ -1,0 +1,1 @@
+less HW2.pdf | grep -E '[a-z]{20}' | sed -E 's/(  |[^a-z])//' | sed ':a;N;$!ba;s/\n//g' > bigenigma.txt
