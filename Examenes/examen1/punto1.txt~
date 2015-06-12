@@ -5,4 +5,4 @@ set label 1 "T/K" at 13,100
 set title "Temperatura de los planetas del sistea solar"
 unset key
 set datafile separator ","
-plot "solartemos.csv" using 2:3
+plot "solartemos.csv" every ::1 using 2:3
