@@ -1,0 +1,5 @@
+sed 's/[\*\,]//g' planets.txt | sed 's/.*Unknown.*//g' | sed ':a;N;$!ba;s/\n\n/\n/g' > p2hastac.txt
+
+sed -E 's/([0-9a-z\)])\s+([0-9\-])/\1,\2/g' p2hastac.txt | sed -E 's/([0-9a-z\)])\s+([0-9\-])/\1,\2/g' | sed -E 's/^\s+/,/g' | sed -E 's/([A-Z])\s+([A-Z])/\1,\2/g' > punto2concomas.txt
+
+sed 's/(10/(10^/g' punto2concomas.txt > punto2.csv

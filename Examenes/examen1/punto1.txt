@@ -1,0 +1,8 @@
+set term dumb
+set logscale xy
+set xlabel "D"
+set ylabel "T/K"
+set title "Temperatura de los planetas del sistea solar"
+unset key
+set datafile separator ","
+plot "solartemos.csv" every ::1 using 2:3

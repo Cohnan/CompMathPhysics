@@ -1,0 +1,3 @@
+sed 's/[\*\,]//g' planets.txt | sed 's/.*Unknown.*//g' | sed ':a;N;$!ba;s/\n\n/\n/g'
+
+
