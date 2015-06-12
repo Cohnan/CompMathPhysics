@@ -1,5 +1,6 @@
 #!/bin/bash
-# Programa que recibe como argumentos frases para ser buscadas en la página de arXiv en el tema específicado(physics en este caso). Las mayúsculas no son relevantes para la búsqueda, pero espacios sí"
+# Programa que recibe una línea de letras minúsculas del abecedario inglés, por argumento o si no por 
+# standard input stream, y hace 10 barridos inversos de los mostrados en el enunciado de la tarea.
 # Autor: Sebastián Camilo Puerto	Código: 201318518
 # Materia: Métodos Computacionales
 # Periodo: 2015-19
