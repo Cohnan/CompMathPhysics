@@ -1,0 +1,13 @@
+carpetaprogs=~/gitReps/c-examples/src/
+
+for prog in $(ls $carpetaprogs .c); do echo "#$prog"; echo "\`\`\`c"; cat "$carpetaprogs$prog" ; echo "\`\`\`\n\n" ; done > codigosC.md
+
+punto 2
+
+rm $carpetaProgs{"c31_goto.c","c83_terminal_io.c","cA5_thread_join.c"}
+
+======================================
+
+10, 50, 63, 94 y 127
+
+======================================
