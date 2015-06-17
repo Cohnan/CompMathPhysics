@@ -285,7 +285,9 @@ print "|x|y|"
 print "|---|---|"
 for i in range(len(x)):
 
-    print "|" + str(xNew[i]) + "|" + str(yNew[i]) + "|"```
+    print "|" + str(xNew[i]) + "|" + str(yNew[i]) + "|"
+```
+
 ```bash
 python punto3.py > tabla.md
 ```
