@@ -94,7 +94,7 @@ tit3 = ax7.set_title("Cubic Spline")
 # Graficación del seno en un color claro en cada gráfico de una interpolación
 for i in range(9):
     eval("ax" + str(i+1) + ".plot(x, sin(x), 'c-')")
-    
+
 def sinMod(x):
     return .5 * sin(x)
 
@@ -102,37 +102,55 @@ numDoings = 3
 
 interps = ["lag", "lin", "cub"]
 
+def hola(x): return 1
 # Creación e impresión de funciones que evaluen la distancia entre cada una la funciones y calcule el error porcentual. (La distancia está configurada para que la del seno sea 1)
 
 for inter in interps:
     for i in range(1, numDoings + 1):
+        # Hace funciones que evalúan el cuadrado de la diferencia entre las funciones
+        exec("def " + inter + str(i) + "Integ(x): return (sin(x) -" + inter + str(i) + "(x))**2")
+
+        # Imprime un texto para formato, luego hace la integral del cuadrado anterior, saca su raiz cuadrada y
+        # lo escala de modo que esto represente un producto interno, donde la raiz del producto interno de una 
+        #función consigo misma sea su magnitud y se escala de modo que el seno tenga una magnitud de 1,
+        # y finalmente se multplica por 100 para que sea un porcentaje. 
+        print "El error porcentual de la distancia entre las funciones " + inter + str(i) + "(x) y seno(x) es de %" + \
+        str(eval("100 * (1/np.pi)* sqrt(quad(" + inter + str(i) + "Integ, 0, np.pi)[0])"))
         exec("def " + inter + str(i) + "Integ(x): return 0.5 * 100 * abs(sin(x) -" + inter + str(i) + "(x))")
         print "El error porcentual de la distancia entre las funciones " + inter + str(i) + "(x) y seno(x) es de " + \
         str(eval("np.sqrt(quad(" + inter + str(i) + "Integ, 0, np.pi)[0])"))
     print 
 ```
+
+La interpolación con 5, 10 y 20 datos, con el **seno** de color claro en cada una para apreciar la diferencia es:
+
+![Interpolación del Seno](https://github.com/Cohnan/MC/blob/master/Talleres/Taller4/interpolacionSeno.png)
+
 La distancia de la que hablo es la raiz cuadrada del producto interno de la diferencia de las funciones en el intervalo 0 a 2 PI.
 
-+ El error porcentual de la distancia entre las funciones lag1(x) y seno(x) es de 3.61800627279
-+ El error porcentual de la distancia entre las funciones lag2(x) y seno(x) es de 0.0404810277518
-+ El error porcentual de la distancia entre las funciones lag3(x) y seno(x) es de 0.019018873632
++ El error porcentual de la distancia entre las funciones lag1(x) y seno(x) es de %5.57088003866
++ El error porcentual de la distancia entre las funciones lag2(x) y seno(x) es de %0.00125953372875
++ El error porcentual de la distancia entre las funciones lag3(x) y seno(x) es de %0.000335997569728
++ 
++ El error porcentual de la distancia entre las funciones lin1(x) y seno(x) es de %8.51232225711
++ El error porcentual de la distancia entre las funciones lin2(x) y seno(x) es de %1.75618227884
++ El error porcentual de la distancia entre las funciones lin3(x) y seno(x) es de %0.397315273852
++ 
++ El error porcentual de la distancia entre las funciones cub1(x) y seno(x) es de %5.57088003866
++ El error porcentual de la distancia entre las funciones cub2(x) y seno(x) es de %0.0568801893041
++ El error porcentual de la distancia entre las funciones cub3(x) y seno(x) es de %0.00121066615614
 
-+ El error porcentual de la distancia entre las funciones lin1(x) y seno(x) es de 4.63251375176
-+ El error porcentual de la distancia entre las funciones lin2(x) y seno(x) es de 2.00053698885
-+ El error porcentual de la distancia entre las funciones lin3(x) y seno(x) es de 0.953043620995
+La interpolación de **Lagrange**  mostró ser la más precisa en todos los 3 casos (5, 10 y 20 datos). La menos precisa fue la interpolación con **spline lineal**, la cual ni siquiera con 20 datos mostró ajustarse de manera visualmente suave (lo cual es de esperarse debido a que ésta gráfica está compuesta únicamente de líneas rectas), como si lo hicieron las otras 2 de manera considerable.
 
-+ El error porcentual de la distancia entre las funciones cub1(x) y seno(x) es de 3.61800627279
-+ El error porcentual de la distancia entre las funciones cub2(x) y seno(x) es de 0.326529733734
-+ El error porcentual de la distancia entre las funciones cub3(x) y seno(x) es de 0.0500040890334
+La más precisa visualmente fue la interpolación spline cúbico, con inapreciable diferencia visible desde la interpolación con 10 datos, pero según los errores presentados por las distancias, la interpolación de Lagrange es la más fiel al seno en más lugares desde los 10 datos.
 
-La interpolación con **spline cúbico**  mostró ser la más precisa en todos los 3 casos (5, 10 y 20 datos). La menos precisa fue la interpolación con **spline lineal**, 
-la cual ni siquiera con 20 datos mostró ajustarse de manera suavemente, como si lo hicieron las otras 2 de manera considerable. 
-La más precisa fue la interpolación con spline cúbico, con inapreciable diferencia a la vista desde la interpolación con 10 datos. 
+Lagrange fue mejor en apariencia con sólo 10 datos, que con 20, pero sus distancias al seno indican que esta primera se debió sólo a coincidencia y no refleja realmente el comportamiento de la función.
 
-Lagrange mostró ser mejor con sólo 10 datos, que con 20, lo cual indica que esta primera se debió a coincidencia y no puede esperarse en general.
-Esto se aprecia al analizar la distancia.
+Tiene sentido que Lagrange sea la más adecuada interpolación ya que su expansión de Taylor es una serie alternante con términos decrecientes, donde cada término que se agregue a la suma parcial representa una reducción en el error de la aproximación  y dond el siguiente representa una cota superior para el error, así que al hacer con Lagrange polinomios de mayores grados se logran cada vez mejores aproximaciones.
 
-En general, hacer la interpolación con más datos hacía que las gráficas fueran más precisas.
+En cambio, el spline cúbico simplemente aproxima la función en intervalos con funciones cúbicas, que no son suficientes para ajustarse perfectamente a la función en cada punto, pues la serie del seno es infinita.
+
+En general, hacer la interpolación con más datos hizo que las gráficas fueran más cercanas al seno.
 
 **d.**
 ```python
@@ -187,15 +205,17 @@ for i in range(4, 7):
     sp = plt.subplot(2,3,i)
     sp.scatter(xd, ys)
 ```
+Las gráficas de las interpolaciones de **Lagrange**, **Spline Lineal** y **Spline Cúbico** respectivamente son:
 
-Las funciones que utilizan polinomios, es decir Lagrange y el Cubic Spline presentan oscilaciones 
-entre los puntos de los datos originales cuando 2 de éstos están a la misma altura, 
-para que los datos coincidan ya que, al ser polinomios (no contantes), tienen un número finito de raices 
-y por lo tanto no tienen permitido permanecer en un valor en un intervalo. 
+![Pulso y Step Interpolación](https://github.com/Cohnan/MC/blob/master/Talleres/Taller4/pulsoYstep.png)
+
+Las funciones que utilizan polinomios, es decir Lagrange y el Cubic Spline, presentan oscilaciones 
+entre los puntos de los datos originales cuando 2 de éstos están a la misma altura; esto 
+para que los datos coincidan ya que, al ser polinomios (no constantes), tienen un número finito de raices 
+y por lo tanto no tienen permitido permanecer en un valor en un intervalo.
 
 El spline lineal en cambio, no muestra oscilación entre los puntos ya que únicamente se están 
 uniendo los puntos con líneas.
-
 
 
 2. Leer del libro [Numerical Methods and Optimization](http://ezproxy.uniandes.edu.co:8080/login?url=http://dx.doi.org/10.1007/978-3-319-07671-3) de *Eric Walter* los ejemplos de la sección 5.2: *Computer experiments*, *Prototyping* y *Mining surveys*.  
