@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from scipy.interpolate import interp1d
 import matplotlib as mpl
@@ -8,17 +10,27 @@ data = np.genfromtxt('tabla.tsv', delimiter = '\t')
 xd = data[:, 0]
 yd = data[:, 1]
 
+# Interpolación de los datos
 cub = interp1d(xd, yd, kind = 'cubic')
 
 fig = plt.figure('Punto 3')
 ax = fig.add_subplot(111)
 
-x = np.linspace(min(xd), max(yd), len(xd))
+# Generación de x's uniformemente espaciados
+#x = np.linspace(min(xd), max(yd), len(xd))
+x = np.array([])
+for i in range(len(xd)):
+    x = np.append(x, [np.random.uniform(min(xd), max(xd))])
+
+x = np.sort(x)
+
 line, = ax.plot(x, cub(x))
 
+xNew = line.get_xdata()
 yNew = line.get_ydata()
 
 print "|x|y|"
 print "|---|---|"
 for i in range(len(x)):
-    print "|" + str(xd[i]) + "|" + str(yNew[i]) + "|"
+
+    print "|" + str(xNew[i]) + "|" + str(yNew[i]) + "|"
