@@ -95,16 +95,12 @@ tit3 = ax7.set_title("Cubic Spline")
 for i in range(9):
     eval("ax" + str(i+1) + ".plot(x, sin(x), 'c-')")
 
-def sinMod(x):
-    return .5 * sin(x)
-
 numDoings = 3
 
 interps = ["lag", "lin", "cub"]
 
-def hola(x): return 1
-# Creación e impresión de funciones que evaluen la distancia entre cada una la funciones y calcule el error porcentual. (La distancia está configurada para que la del seno sea 1)
 
+# Creación e impresión de funciones que evaluen la distancia entre cada una la funciones y calcule el error porcentual. (La distancia está configurada para que la del seno sea 1)
 for inter in interps:
     for i in range(1, numDoings + 1):
         # Hace funciones que evalúan el cuadrado de la diferencia entre las funciones
@@ -268,7 +264,7 @@ cub = interp1d(xd, yd, kind = 'cubic')
 fig = plt.figure('Punto 3')
 ax = fig.add_subplot(111)
 
-# Generación de x's uniformemente espaciados
+# Generación de x's distribuidos uniformemente
 #x = np.linspace(min(xd), max(yd), len(xd))
 x = np.array([])
 for i in range(len(xd)):
@@ -278,9 +274,11 @@ x = np.sort(x)
 
 line, = ax.plot(x, cub(x))
 
+# Extracción de datos con distribución uniforme
 xNew = line.get_xdata()
 yNew = line.get_ydata()
 
+# Impresión de tabla en formato para Markdown
 print "|x|y|"
 print "|---|---|"
 for i in range(len(x)):
