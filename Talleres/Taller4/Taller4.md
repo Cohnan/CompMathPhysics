@@ -186,16 +186,19 @@ uniendo los puntos con líneas.
 |4.45641816306|-0.0704087548339|
 
 ```python
-%pylab
+import numpy as np
+from scipy.interpolate import interp1d
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
-data = genfromtxt('tabla.tsv', delimiter = '\t')
+data = np.genfromtxt('tabla.tsv', delimiter = '\t')
 
 xd = data[:, 0]
 yd = data[:, 1]
 
 cub = interp1d(xd, yd, kind = 'cubic')
 
-fig = figure('Punto 3')
+fig = plt.figure('Punto 3')
 ax = fig.add_subplot(111)
 
 x = np.linspace(min(xd), max(yd), len(xd))
@@ -203,12 +206,43 @@ line, = ax.plot(x, cub(x))
 
 yNew = line.get_ydata()
 
+print "|x|y|"
+print "|---|---|"
 for i in range(len(x)):
-    print "|%f|%f|"%(xd[i], yNew[i])
+    print "|" + str(xd[i]) + "|" + str(yNew[i]) + "|"
 ```
 ```bash
 python punto3.py > tabla.md
 ```
+Me produce la siguiente tabla en un archivo aparte:
+
+|x|y|
+|---|---|
+|0.138490669327|2.30060161547|
+|0.153824397539|2.29913393745|
+|0.229578204444|2.13233284746|
+|0.266435179672|1.8183507823|
+|0.276929414769|1.38455446254|
+|0.334159056347|0.895192961751|
+|0.383612191183|0.397442019252|
+|0.446434890218|-0.0854790003733|
+|0.541989923364|-0.530592575213|
+|1.33433323552|-0.914921183357|
+|1.44538290595|-1.2154873029|
+|1.51883847305|-1.40931341192|
+|1.6057389642|-1.47342198852|
+|1.74396177688|-1.38557101428|
+|1.87038245824|-1.16401894679|
+|2.30863773381|-0.86660941084|
+|2.38628525713|-0.517901857796|
+|2.46587111271|-0.148740331981|
+|2.65137821271|0.2132338011|
+|2.75152244191|0.538383797563|
+|2.82756611885|0.813567186666|
+|4.19566321688|1.03669890537|
+|4.3105185461|1.20587036628|
+|4.45641816306|1.31917319508|
+
 
 
 **Al terminar la clase ejecute `lottery.sh` para saber si su taller va a ser revisado.**
