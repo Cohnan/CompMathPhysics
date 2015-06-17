@@ -20,14 +20,17 @@ x1 = array([0., np.pi/2, np.pi, 3*np.pi/2, 2*np.pi])
 x2 = np.linspace(0, 2*np.pi, 10)
 x3 = np.linspace(0, 2*np.pi, 20)
 
+# Interpolacones con 5 datos
 lag1 = lagrange(x1, sin(x1))
 lin1 = interp1d(x1, sin(x1), kind = 'slinear')
 cub1 = interp1d(x1, sin(x1), kind = 'cubic')
 
+# Interpolacones con 10 datos
 lag2 = lagrange(x2, sin(x2))
 lin2 = interp1d(x2, sin(x2), kind = 'slinear')
 cub2 = interp1d(x2, sin(x2), kind = 'cubic')
 
+# Interpolacones con 20 datos
 lag3 = lagrange(x3, sin(x3))
 lin3 = interp1d(x3, sin(x3), kind = 'slinear')
 cub3 = interp1d(x3, sin(x3), kind = 'cubic')
@@ -88,6 +91,7 @@ ax9.plot(x, cub3(x), 'k-')
 
 tit3 = ax7.set_title("Cubic Spline")
 
+# Graficación del seno en un color claro en cada gráfico de una interpolación
 for i in range(9):
     eval("ax" + str(i+1) + ".plot(x, sin(x), 'c-')")
     
@@ -98,7 +102,7 @@ numDoings = 3
 
 interps = ["lag", "lin", "cub"]
 
-def hola(x): return 1
+# Creación e impresión de funciones que evaluen la distancia entre cada una la funciones y calcule el error porcentual. (La distancia está configurada para que la del seno sea 1)
 
 for inter in interps:
     for i in range(1, numDoings + 1):
@@ -107,23 +111,23 @@ for inter in interps:
         str(eval("np.sqrt(quad(" + inter + str(i) + "Integ, 0, np.pi)[0])"))
     print 
 ```
-La distancia de la que hablo es la raiz cuadrada del producto interno de la diferencia de las funciones en el intervalo 0 a $2*\pi$.
+La distancia de la que hablo es la raiz cuadrada del producto interno de la diferencia de las funciones en el intervalo 0 a 2 PI.
 
-El error porcentual de la distancia entre las funciones lag1(x) y seno(x) es de 3.61800627279
-El error porcentual de la distancia entre las funciones lag2(x) y seno(x) es de 0.0404810277518
-El error porcentual de la distancia entre las funciones lag3(x) y seno(x) es de 0.019018873632
++ El error porcentual de la distancia entre las funciones lag1(x) y seno(x) es de 3.61800627279
++ El error porcentual de la distancia entre las funciones lag2(x) y seno(x) es de 0.0404810277518
++ El error porcentual de la distancia entre las funciones lag3(x) y seno(x) es de 0.019018873632
 
-El error porcentual de la distancia entre las funciones lin1(x) y seno(x) es de 4.63251375176
-El error porcentual de la distancia entre las funciones lin2(x) y seno(x) es de 2.00053698885
-El error porcentual de la distancia entre las funciones lin3(x) y seno(x) es de 0.953043620995
++ El error porcentual de la distancia entre las funciones lin1(x) y seno(x) es de 4.63251375176
++ El error porcentual de la distancia entre las funciones lin2(x) y seno(x) es de 2.00053698885
++ El error porcentual de la distancia entre las funciones lin3(x) y seno(x) es de 0.953043620995
 
-El error porcentual de la distancia entre las funciones cub1(x) y seno(x) es de 3.61800627279
-El error porcentual de la distancia entre las funciones cub2(x) y seno(x) es de 0.326529733734
-El error porcentual de la distancia entre las funciones cub3(x) y seno(x) es de 0.0500040890334
++ El error porcentual de la distancia entre las funciones cub1(x) y seno(x) es de 3.61800627279
++ El error porcentual de la distancia entre las funciones cub2(x) y seno(x) es de 0.326529733734
++ El error porcentual de la distancia entre las funciones cub3(x) y seno(x) es de 0.0500040890334
 
 La interpolación con **spline cúbico**  mostró ser la más precisa en todos los 3 casos (5, 10 y 20 datos). La menos precisa fue la interpolación con **spline lineal**, 
-la cual ni siquiera con 20 datos mostró ajustarse de manera no apreciable a la gráfica del seno de manera suave, como si lo hizo de manera considerable **Lagrange** pero aún no de forma satisfactoria. 
-La más precisa fue la interpolación con spline cúbico, con inapreciable diferencia desde la interpolación con 10 datos. 
+la cual ni siquiera con 20 datos mostró ajustarse de manera suavemente, como si lo hicieron las otras 2 de manera considerable. 
+La más precisa fue la interpolación con spline cúbico, con inapreciable diferencia a la vista desde la interpolación con 10 datos. 
 
 Lagrange mostró ser mejor con sólo 10 datos, que con 20, lo cual indica que esta primera se debió a coincidencia y no puede esperarse en general.
 Esto se aprecia al analizar la distancia.
@@ -140,16 +144,19 @@ ys = array([0., 0., 0., 1., 1., 1., 1.])
 
 x = np.linspace(-3, 3, 100)
 
+# Pulso interpolación
 lagp = lagrange(xd, yp)
 linp = interp1d(xd, yp, kind = 'slinear')
 cubp = interp1d(xd, yp, kind = 'cubic')
 
+# Step interpolación
 lags = lagrange(xd, ys)
 lins = interp1d(xd, ys, kind = 'slinear')
 cubs = interp1d(xd, ys, kind = 'cubic')
 
 fig = figure('Pulso y Step', figsize = (15, 10))
 
+# Pulsog rafica
 ax1 = fig.add_subplot(231)
 ax1.set_title("Pulso")
 ax1.plot(x, lagp(x))
@@ -160,6 +167,7 @@ ax2.plot(x, linp(x))
 ax3 = fig.add_subplot(233)
 ax3.plot(x, cubp(x))
 
+# Step grafica
 ax4 = fig.add_subplot(234)
 ax4.set_title("Step")
 ax4.plot(x, lags(x))
@@ -170,6 +178,7 @@ ax5.plot(x, lins(x))
 ax6 = fig.add_subplot(236)
 ax6.plot(x, cubs(x))
 
+# Adición de datos originales en cada gráfico
 for i in range(1, 4):
     sp = plt.subplot(2,3,i)
     sp.scatter(xd, yp)
@@ -179,12 +188,12 @@ for i in range(4, 7):
     sp.scatter(xd, ys)
 ```
 
-Las funciones que utilizan polinomios, es decir Lagrange y el Cubic Spline presentan oscilaciones \
-entre los puntos de los datos originales cuando 2 de éstos están a la misma altura, \
-para que los datos coincidan ya que, al ser polinomios (no contantes), tienen un número finito de raices \
-y por lo tanto no tienen permitido permanecer en un valor en un intervalo. \
+Las funciones que utilizan polinomios, es decir Lagrange y el Cubic Spline presentan oscilaciones 
+entre los puntos de los datos originales cuando 2 de éstos están a la misma altura, 
+para que los datos coincidan ya que, al ser polinomios (no contantes), tienen un número finito de raices 
+y por lo tanto no tienen permitido permanecer en un valor en un intervalo. 
 
-El spline lineal en cambio, no muestra oscilación entre los puntos ya que únicamente se están \
+El spline lineal en cambio, no muestra oscilación entre los puntos ya que únicamente se están 
 uniendo los puntos con líneas.
 
 
@@ -241,6 +250,7 @@ line, = ax.plot(x, cub(x))
 
 yNew = line.get_ydata()
 
+# Impresińo de tabla formato Markdown
 print "|x|y|"
 print "|---|---|"
 for i in range(len(x)):
