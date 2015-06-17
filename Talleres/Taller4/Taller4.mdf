@@ -185,5 +185,30 @@ uniendo los puntos con líneas.
 |4.3105185461|-0.0681282942773|
 |4.45641816306|-0.0704087548339|
 
+```python
+%pylab
+
+data = genfromtxt('tabla.tsv', delimiter = '\t')
+
+xd = data[:, 0]
+yd = data[:, 1]
+
+cub = interp1d(xd, yd, kind = 'cubic')
+
+fig = figure('Punto 3')
+ax = fig.add_subplot(111)
+
+x = np.linspace(min(xd), max(yd), len(xd))
+line, = ax.plot(x, cub(x))
+
+yNew = line.get_ydata()
+
+for i in range(len(x)):
+    print "|%f|%f|"%(xd[i], yNew[i])
+```
+```bash
+python punto3.py > tabla.md
+```
+
 
 **Al terminar la clase ejecute `lottery.sh` para saber si su taller va a ser revisado.**
