@@ -3,7 +3,7 @@
 
 19-Jun-2015
 
-Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Talleres/Taller5/ y en él añada un enlace al cuaderno de IPython elaborado. No olvide al final hacer un *commit* y un *push*.
+Haga una copia de este archivo en su repositorio de GitHub en la carpeta /MC/Talleres/Taller5/ y en él añada un [enlace al cuaderno de IPython elaborado](https://github.com/Cohnan/MC/blob/master/Talleres/Taller5/gibbs.ipynb). No olvide al final hacer un *commit* y un *push*.
 
 ## series de Fourier
 
