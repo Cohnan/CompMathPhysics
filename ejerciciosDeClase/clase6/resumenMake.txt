@@ -1,0 +1,28 @@
+Syntax
+
+make [ -f makefile ] [ options ] ... [ targets ] ...
+
+Description
+
+The purpose of the make utility is to determine automatically which pieces of a large program need to be re-compiled, and issue the commands necessary to recompile them.
+
+make is not limited to programs. You can use it to describe any task where some files must be updated automatically from others whenever the others change.
+
+To prepare to use make, you must write a file called the makefile that describes the relationships among files in your program, and state the commands for updating each file.
+
+Once a suitable makefile exists
+make 
+
+suffices to perform all necessary recompilations. The make program uses the makefile data base and the last-modification times of the files to decide which of the files need to be updated. For each of those files, it issues the commands recorded in the database.
+
+
+-f file, --file=file, --makefile=file 	Use file as a makefile.
+
+
+make is invoked with a list of target file names to build as command-line arguments:
+
+make [TARGET ...] 
+
+ Without arguments, make builds the first target that appears in its makefile, which is traditionally a target named all.
+
+
