@@ -233,6 +233,10 @@ Su sintaxis es `make [ -f makefile ] [ options ] ... [ targets ] ...`
 
 Resumen breve de su funcionalidad: Es una utilidad que permite la actualización de archivos que dependen de otros cuando éstos cambien. Se utiliza generalmente para la recompilación de pequeñas piezas de código cuando partes más grandes han sido actualizadas. Para su funcionamiento se requiere de la presencia de un archivo, llamado el makefile, que describa la serie de comandos a llevar a cabo cuando se determine que hubo actualización de determinados archivos. Es posible especificar qué archivos se desea actualizar, llamados targets, (primero determinando si es necesario) especificándolo como indica la sintaxis; de lo contrario se realiza este proceso al primer target que aparece en el makefile, que suele ser uno llamado *all*.
 
+# Séptima Clase 10-Jun-2015
+
+## Hands-on 5
+
 
 
 
@@ -240,3 +244,5 @@ Resumen breve de su funcionalidad: Es una utilidad que permite la actualización
 
 + Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
 + Graficación de información, que se extraiga de internet, con de `gnuplot`, ojalá interactivas.
++ La graficación realizarla mejor con matplotlib. Algún tipo de animación también.
++ Quizá utilizar imágenes que puedan ser analizadas con las herramientas de matplotlib. Algo como estrellas o planetas o algo, quizá tratar de analizar una serie de imágenes para analizar la trayectoria, y poder simular el futuro de ésto. (Quizá sea demasiado complicado, pero lo consideraré.)
