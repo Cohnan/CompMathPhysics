@@ -237,8 +237,44 @@ Resumen breve de su funcionalidad: Es una utilidad que permite la actualización
 
 ## Hands-on 5
 
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-5.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase7/solucionHandsOn5.ipynb)
 
+Algunas curvas de Lissajous:
 
+![Curvas de Lissajous](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase7/liss.png)
+
+# Octava Clase 12-Jun-2015
+
+## Hands-on 6
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-6.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase8/solucionHandsOn6.ipynb)
+
+# Novena Clase 16-Jun-2015
+
+## Hands-on 7
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-7.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase8/solucionHandsOn7.ipynb)
+
+# Décima Clase 17-Jun-2015
+
+##TODO github stuff about branching, merging, tags, program to administrate all of this. Fourier series.
+
+## Hands-on 8
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-8.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase8/solucionHandsOn8.ipynb)
+
+# Onceava Clase 19-Jun-2015
+
+##TODO Fourier transforms, image processing.
+
+## Hands-on 9
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-9.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase8/solucionHandsOn9.ipynb)
 
 #Project
 
