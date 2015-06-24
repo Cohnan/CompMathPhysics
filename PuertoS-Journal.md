@@ -276,6 +276,31 @@ Algunas curvas de Lissajous:
 [Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-9.md)
 [Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase8/solucionHandsOn9.ipynb)
 
+# Doceava Clase 23-Jun-2015
+
+## Derivadas Numéricas
+
+Hay varias formas de elegir el espaciamiento de acuerdo a diferentes cosos de optimización.
+
+Una primera forma es utiliza la definicioń de derivada, utilizando h's pequeños, pero no puede ser un h muy pequeños debido al substractive error, y se puede llegar al punto en que los errores aumentan al disminuir h.
+
+Backward differences
+Forward differences
+Central differences
+
+El error de los 2 primeros es de orden 1 (depende linealmente con h). El de Central Differences es de orden 2.
+
+Si además se hace extrapolación, con polinomios de $h**2$, para el tercer método, se obtiene una mejora del orden de reducción del error igual, sindo ahora de orden $2*ord$, con ord el orden del polinomio. Para esto, los h's se escogen de acuerdo a ....
+
+
++ sympy
++ logspace
+
+## Hands-on 10
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-10.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase12/solucionHandsOn10.ipynb)
+
 #Project
 
 + Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
