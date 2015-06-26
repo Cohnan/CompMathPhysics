@@ -301,6 +301,17 @@ Si además se hace extrapolación, con polinomios de $h**2$, para el tercer mét
 [Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-10.md)
 [Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase12/solucionHandsOn10.ipynb)
 
+
+# Treceava Clase 23-Jun-2015
+
+## Integración Numérica
+
++ Regla del Trapecio:
+
++ Regla de Simpson: interpolacion, con polinomio, de 3 puntos. Error disminuye con $h**4$, siendo $h$ el stepsize.
+
++ Cuadratura de Gauss: exacto para polinomios de grado $2*n-1$, con $n$ el número de intervalos en los que se divide el interavalo de integración. Los puntos no deben estar igualmente espaciados. Se interpola primero con un polinomio de grado $n$. 
+
 #Project
 
 + Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
