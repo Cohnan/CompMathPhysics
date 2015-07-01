@@ -312,6 +312,14 @@ Si además se hace extrapolación, con polinomios de $h**2$, para el tercer mét
 
 + Cuadratura de Gauss: exacto para polinomios de grado $2*n-1$, con $n$ el número de intervalos en los que se divide el interavalo de integración. Los puntos no deben estar igualmente espaciados. Se interpola primero con un polinomio de grado $n$. 
 
+# Quinceava Clase 01-Jul-2015
+
+## Hands-on 13
+
+[Enunciado](https://github.com/ComputoCienciasUniandes/MetodosComputacionales/blob/master/hands_on/HandsOn-13.md)
+[Solución](https://github.com/Cohnan/MC/blob/master/ejerciciosDeClase/clase12/solucionHandsOn13.ipynb)
+
+
 #Project
 
 + Extracción de información de alguna página web y su posterior manipulación podría ser útil en la elaboración de un proyecto dinámico.
