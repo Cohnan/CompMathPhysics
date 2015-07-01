@@ -1,0 +1,21 @@
++ Class to represent the systems of masses
+
+++ Receive masses (np.array), velocities (np.array); maybe the method (function) to solve the ODE's (default Rugecuta 4th maybe); default time step, allowed porcentual or maybe relative error between init position and a position to decide periodicity; .
+
+++ I want to store:
+
++++ positions, velocities (in a nd.array Y = [m1, .., mn, v1, ..., vn]) of a complete orbit and it's period if periodicity present.
++++ Also the times corresponding to each step, maybe an nd.array for just the times, and a dictionary to acces the Y's with keys the times. 
++++ Maybe accelerations would be appropiate too if I were to use multistep methods implemented by myself (maybe not such a good idea given that the scipy implementations are possibly better). 
++++ Maybe an current state decided by a step time with some default (I think the total system should be calculated at the initialization of the object to have the information of periodicity and orbital period).
++++ A max time (because of the periodicity thing)
++++ A boolean to store whether it is periodic or not.
+
+++ Functions to:
+
++++ Calculate all the system up to the max time and store it. Start from the last calculated state.
++++ Take a time and reduce it modulo the period (if periodic) and convert it to the greatest step time smaller than the given time. I plan to use it to change the current state.
++++ Calculate acceleration for a given mass at a given time; function to calculate energies (cinetic, mechanical and total)
++++ possibly private function to advance the system a time given a time step (or if with the default one); 
++++ I think a function that sets up the animation initialization function and the rest of the stuff would be appropiate, this would possibly recieve the animation time (or calculate one), fps. I think I'll leave the saving to the calling place.
++++ Change the max calculation time (if smaller than the calculated one, then do nothing) and use the updater.
