@@ -39,3 +39,4 @@ Changes:
 + Function to change both the timestep and the max time, to avoid unnecesasry calculations in case I want to recalculate the system
 + array for times (avoidable with sort, but probably more expesive)
 + calcular_Ys asks for restart, otherwise will begin since t_max
++ store too an array with the derivatives of each Y, in a dictionary too, in case I use multistep methods
