@@ -33,6 +33,9 @@ Changes:
 + masses not a dictionary but array
 + Ys dictionary with keys the times
 + keep time_step, porcentual error final positions, 
-+ functions to change time step, relative error
++ functions to change time step, relative error, state, return state
 + actual time in initilization
 + store N for number of masses
++ Function to change both the timestep and the max time, to avoid unnecesasry calculations in case I want to recalculate the system
++ array for times (avoidable with sort, but probably more expesive)
++ calcular_Ys asks for restart, otherwise will begin since t_max
