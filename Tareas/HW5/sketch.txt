@@ -1,6 +1,6 @@
 + Class to represent the systems of masses
 
-++ Receive masses (np.array), velocities (np.array); maybe the method (function) to solve the ODE's (default Rugecuta 4th maybe); default time step, allowed porcentual or maybe relative error between init position and a position to decide periodicity; .
+++ Receive masses (np.array), velocities (np.array); maybe the method (function) to solve the ODE's (default Rugecuta 4th maybe); default time step, allowed porcentual or maybe relative error between init position and a position to decide periodicity; max time to compute;  derivative function of pos_vel vector.
 
 ++ I want to store:
 
@@ -23,4 +23,16 @@
 
 + Function for Runge-Kuta 4 that receives a state vector Y, a derivative function (of Y and t), and a time step.
 
++ 1st point. 
+
 + For the 2nd point, function to calculate the appropiate a; receiving initial and final values for a range where to look for, relative allowed error; using bisection.
+
+
+Changes:
+
++ masses not a dictionary but array
++ Ys dictionary with keys the times
++ keep time_step, porcentual error final positions, 
++ functions to change time step, relative error
++ actual time in initilization
++ store N for number of masses
